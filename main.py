@@ -6,6 +6,9 @@ from pygame import mixer
 # Game start
 pygame.init()
 
+# Background
+background = pygame.image.load('pacman arena new.png')
+
 # Create the display
 screen = pygame.display.set_mode((800,600))
 
@@ -26,6 +29,8 @@ while running:
     # RGB = Red, Green, Blue
     screen.fill((255,225,10))
 
+    # Background
+    screen.blit(background, (0,0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
