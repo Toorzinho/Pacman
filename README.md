@@ -125,6 +125,18 @@ Her teleporteres spilleren til den omvendte side. Når spilleren rører skærmgr
 Variablerne ``screen_hight`` og ``screen_width``bliver brugt i starten til at kode skærmen, og bliver også brugt her, så det er smart at bruge en variabel i stedet for bare at skrive tal ned
 
 ```
+# Ghost
+    if ghost_x > screen_width:
+        ghost_x = 0
+    elif ghost_x < 0:
+        ghost_x = screen_width
+    if ghost_y > screen_height:
+        ghost_y = 0
+    elif ghost_y < 0:
+        ghost_y = screen_height
+```
+
+```
     # Render graphics
     screen.fill((0, 0, 0))  # Fill the screen with black color
     screen.blit(pacman_image, (pacman_x, pacman_y))  # Render Pacman image
