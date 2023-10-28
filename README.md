@@ -41,7 +41,9 @@ Vi begyndnte med at diskutere hvad vi skulle begynde med at kode. Vi startede me
 ```
 
 Variablen start_time initialiseres med den aktuelle tid i millisekunder ved hjælp af pygame.time.get_ticks() i begyndelsen af spille loopet.
-Derefter bruges der noget matematik til at beregne den resterende tid, og hvis den resterende tid er 0, så er der en linjer af kode som slutter spillet (game over)
+Inde i funktionen showTimer() beregnes den forløbne tid ved at trække start_time fra det aktuelle tidspunkt ved hjælp af pygame.time.get_ticks(). Resultatet divideres med 1000 for at konvertere det til sekunder.
+Den resterende tid opnås ved at trække den forløbne tid fra den indledende time_value.
+Den resterende tid vises på skærmen.
 
 ```
         # Wait for the user to press Enter
