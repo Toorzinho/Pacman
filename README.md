@@ -8,9 +8,9 @@ Denne Windows(R) (64-bit) version readme fil beskriver de følgende emner.
    - Beskrivelse af spillet
    - Beskrivelse af funktioner
    - Dokumentationen af programmet (opdelt)
-	- Starten
-	- Enemy og collision
-        - 
+Starten
+Enemy og collision
+
 ==========================================
 
 Spillet er en simpliceret version af pacman, hvor spilleren går efter spøgelset i stedet for pengene. Spillet har flere funktioner som: 
