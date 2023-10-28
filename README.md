@@ -74,29 +74,55 @@ def showScore(x, y):
 Den definerede variabel skal kunne vise antal point, og en smart metode for at opnå det er ved hjælp af strings. Koden bruger strings og plusser dem med de nuværende point
 
 ```
-def showTimer(x, y):
-    elapsed_time = (pygame.time.get_ticks() - start_time) // 1000  # Calculate elapsed time in seconds
-    remaining_time = max(0, time_value - elapsed_time)  # Calculate remaining time
-    timer = font.render("Timer: " + str(remaining_time), True, (255, 255, 255))
-    screen.blit(timer, (x, y))
+def isCollision(ghost_x, ghost_y, pacman_x, pacman_y):
+    distance = math.sqrt(math.pow(ghost_x - pacman_x, 2)) + ((math.pow(ghost_y - pacman_y, 2)))
+    if distance < 32:  # If the distance which is defined above is less than 35, then there is a collision
+        return True
+    else:  # If not, then distance equals false
+        return False
 
-```
-
-Variablen start_time initialiseres med den aktuelle tid i millisekunder ved hjælp af pygame.time.get_ticks() i begyndelsen af spille loopet.
-Inde i funktionen showTimer() beregnes den forløbne tid ved at trække start_time fra det aktuelle tidspunkt ved hjælp af pygame.time.get_ticks(). Resultatet divideres med 1000 for at konvertere det til sekunder.
-Den resterende tid opnås ved at trække den forløbne tid fra den indledende time_value.
-Den resterende tid vises på skærmen.
-
-```
-# Keep the window open until the user closes it
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+    # Collision
+    collision = isCollision(ghost_x, ghost_y, pacman_x, pacman_y)
+    if collision:
+        score_value += 1
+        time_value += 3
+        ghost_x = random.randint(0, 736)
+        ghost_y = random.randint(0, 568)
 ```
 
 
+```
+   # User input handling
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        pacman_x -= 0.2
+    if keys[pygame.K_RIGHT]:
+        pacman_x += 0.2
+    if keys[pygame.K_UP]:
+        pacman_y -= 0.2
+    if keys[pygame.K_DOWN]:
+        pacman_y += 0.2
+```
+
+```
+ if ghost_x > screen_width:
+        ghost_x = 0
+    elif ghost_x < 0:
+        ghost_x = screen_width
+    if ghost_y > screen_height:
+        ghost_y = 0
+    elif ghost_y < 0:
+        ghost_y = screen_height
+```
+
+```
+    # Render graphics
+    screen.fill((0, 0, 0))  # Fill the screen with black color
+    screen.blit(pacman_image, (pacman_x, pacman_y))  # Render Pacman image
+    screen.blit(ghost_image, (ghost_x, ghost_y))  # Render Ghost image
+    showScore(text1X, text1Y)  # Display the score
+    showTimer(text2X, text2Y)  # Display the timer
+```
 
 #### Flowdiagram
 
