@@ -28,17 +28,59 @@ Vi begyndnte med at diskutere hvad vi skulle begynde med at kode. Vi startede me
 ==========================================
 ### Dokumentation af koden
 
-'''
+```
+    # Game Over
+    elapsed_time = (pygame.time.get_ticks() - start_time) // 1000  # Calculate elapsed time in seconds
+    remaining_time = max(0, time_value - elapsed_time)  # Calculate remaining time
+    if remaining_time == 0:
+        game_over = True  # Set game_over to True
+        screen.fill((0, 0, 0))  # Fill the screen with black color
+        gameOverText()  # Display the game over text
+        tryAgainText()
+        pygame.display.update()  # Update the display
+```
+
+```
+        # Wait for the user to press Enter
+        waiting = True
+        while waiting:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RETURN:
+                        # Reset the game variables
+                        pacman_x = 400
+                        pacman_y = 300
+                        ghost_x = 200
+                        ghost_y = 200
+                        score_value = 0
+                        start_time = pygame.time.get_ticks()
+                        game_over = False
+                        waiting = False
+```
+
+```
+def showScore(x, y):
+    score = font.render("Score: " + str(score_value), True, (255, 255, 255))  # Adds 1 for each collision
+    screen.blit(score, (x, y))
+```
+
+```
 def showTimer(x, y):
     elapsed_time = (pygame.time.get_ticks() - start_time) // 1000  # Calculate elapsed time in seconds
     remaining_time = max(0, time_value - elapsed_time)  # Calculate remaining time
     timer = font.render("Timer: " + str(remaining_time), True, (255, 255, 255))
     screen.blit(timer, (x, y))
-  '''
 
+```
 
-
-
+```
+# Keep the window open until the user closes it
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+```
 
 
 
