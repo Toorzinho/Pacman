@@ -3,7 +3,7 @@ Baker, Gabriele og Jadbinder
 
 Lavet i Visual Code Studio 2023, Python
 
-This Windows(R) (64-bit) version readme file describes the following topics.
+Denne Windows(R) (64-bit) version readme fil beskriver de følgende emner.
 
    - Beskrivelse af spillet
    - Beskrivelse af funktioner
