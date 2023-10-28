@@ -90,6 +90,10 @@ def isCollision(ghost_x, ghost_y, pacman_x, pacman_y):
         ghost_y = random.randint(0, 568)
 ```
 
+Funktionen isCollision bruges til at afgøre, om der er en kollision mellem spøgelset og Pacman i spillet.
+Funktionen tager fire parametre: ``ghost_x og ghost_y`` repræsenterer koordinaterne for spøgelset, og ``pacman_x og pacman_y`` repræsenterer koordinaterne for Pacman.
+Når de 2 støder sammen, vil spøgelsen befinde sig i et nyt område på skærmen ved hjælp af ``random.randint()``. Hver gang spilleren stødder ind i spøgelsen, ville spillers points stige med 1. 
+Spillern får også 3 ekstra sekunder til sin ``remaining_time``.
 
 ```
    # User input handling
@@ -104,16 +108,21 @@ def isCollision(ghost_x, ghost_y, pacman_x, pacman_y):
         pacman_y += 0.2
 ```
 
+Koden her viser spillerns input og bevægelsesmekanisme, den er simpel men virker altid perfekt, dog metoden er lidt anderledes. 
+
 ```
- if ghost_x > screen_width:
-        ghost_x = 0
-    elif ghost_x < 0:
-        ghost_x = screen_width
-    if ghost_y > screen_height:
-        ghost_y = 0
-    elif ghost_y < 0:
-        ghost_y = screen_height
+ if player_x > screen_width:
+        player_x = 0
+    elif player_x < 0:
+        player_x = screen_width
+    if player_y > screen_height:
+        player_y = 0
+    elif player_y < 0:
+        player_y = screen_height
 ```
+
+Her teleporteres spilleren til den omvendte side. Når spilleren rører skærmgrænsen, ville han teleportere til den anden side hved hjælp af en simpel kode.
+Variablerne ``screen_hight`` og ``screen_width``bliver brugt i starten til at kode skærmen, og bliver også brugt her, så det er smart at bruge en variabel i stedet for bare at skrive tal ned
 
 ```
     # Render graphics
@@ -123,6 +132,8 @@ def isCollision(ghost_x, ghost_y, pacman_x, pacman_y):
     showScore(text1X, text1Y)  # Display the score
     showTimer(text2X, text2Y)  # Display the timer
 ```
+
+Her bliver alle billeder tildelt og sat på skærmen
 
 #### Flowdiagram
 
