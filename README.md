@@ -133,7 +133,7 @@ Variablerne ``screen_hight`` og ``screen_width``bliver brugt i starten til at ko
     showTimer(text2X, text2Y)  # Display the timer
 ```
 
-Her bliver alle billeder tildelt og sat på skærmen
+Her bliver alle billeder så som ghosten, scoren, timeren, bagrunden og pacman tegnet
 
 #### Flowdiagram
 
