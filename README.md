@@ -167,9 +167,15 @@ def showTimer(x, y):
     timer = font.render("Timer: " + str(remaining_time), True, (255, 255, 255))
     screen.blit(timer, (x, y))
 ```
+gameOverText() funktionen laver en "GAME OVER" tekst med overFont fonten, sætter farven til hvid og placerer den på koordinaterne (200, 250) på skærmen.
 
+tryAgainText() funktionen laver en "Press Enter To Try Again" tekst med retryFont fonten, sætter farven til hvid og placerer den på (205, 310) på skærmen.
 
+showScore() funktionen tager x og y koordinater, laver en tekst med "Score: " og score_value variablen, med font fonten og farve hvid. Den bliver tegnet på skærmen på de givne koordinater.
 
+showTimer() funktionen tager x og y koordinater, beregner den resterende tid baseret på start_tid og max_tid variabler. Den laver en tekst med "Timer: " og den resterende tid, font fonten og farve hvid. Den bliver også tegnet på skærmen på de givne koordinater.
+
+Disse funktioner bruges altså til at vise relevant tekst/info til spilleren på skærmen under spillet.
 
 
 #### Flowdiagram
