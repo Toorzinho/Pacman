@@ -156,6 +156,34 @@ Her bliver alle billeder så som ghosten, scoren, timeren, bagrunden og pacman t
 
 ### Beskrivelse af udviklingsprocessen
 
+De første commits vi lavede var til at se om vi kunne få github til at fungere.
+
+https://github.com/Toorzinho/Pacman/commit/a9a0bc5481402d715aba1efaa329d67114d7052d
+
+https://github.com/Toorzinho/Pacman/commit/bfffbbff759fd007e69e8cf838b0770ed0a36580
+
+https://github.com/Toorzinho/Pacman/commit/00557e30cb6496115f3833b861ba12d81b97bef1
+
+Men efter vi fandt ud af hvordan man lavet commits og brugte github, så gik vi igang med koden.
+Og det første vi gjorde det var at få lavet vores screen og en mini loop så vores screen ikke lukker
+
+https://github.com/Toorzinho/Pacman/commit/f2dd1b46f664aab9838604fd616445c6bc418335
+
+Derefter gik vi igang med at lave vores player og en form for border som der sørger hvor vores player må bevæge sig.
+
+https://github.com/Toorzinho/Pacman/commit/22524aaaadf3a8c4c2834ce4b6bd11db61489cb7
+
+Derefter gik vi igang med at få vores players tegnet så man ren faktisk kunne se ham på vores screen. Vi gik også igang med at lave bagrunden.
+
+https://github.com/Toorzinho/Pacman/commit/3cf508687d1efae4663a19bb80afebad38d2985e
+
+https://github.com/Toorzinho/Pacman/commit/418e834ff43e1bb12dfa49e4eb20634d5680b8c3
+
+https://github.com/Toorzinho/Pacman/commit/b08f565b7abf645498e24ba4ac5a224b69962401
+
+Derefter begyndte vi at lave spillet på en anden fil, da vi skrev på en anden enhed og vi ikke kunne få github til at fungere, derfor tilføjet vi bare filen når vi blev færdige med den resterende code. Det er også derfor vi ikke har så mange commits.
+
+https://github.com/Toorzinho/Pacman/commit/7044856639b0b2ccd125a2980f10141cce4ab4e0
 
 
 
