@@ -63,11 +63,15 @@ Den resterende tid vises på skærmen.
                         waiting = False
 ```
 
+Med denne kode, når spilleren trykker på Enter tasten, efter at game over skærmen er vist, nulstilles spilvariablerne, og spillet starter igen fra starttilstanden.
+
 ```
 def showScore(x, y):
     score = font.render("Score: " + str(score_value), True, (255, 255, 255))  # Adds 1 for each collision
     screen.blit(score, (x, y))
 ```
+
+Den definerede variabel skal kunne vise antal point, og en smart metode for at opnå det er ved hjælp af strings. Koden bruger strings og plusser dem med de nuværende point
 
 ```
 def showTimer(x, y):
