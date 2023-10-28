@@ -1,17 +1,13 @@
-Pacman Projekt 2.P Windows(R) (64-bit) Version Read Me
-Baker, Gabriele og Jadbinder 
+Lavet af Jadbinder, Baker og Gabriel
 
-Lavet i Visual Code Studio 2023, Python
+2.p - Sukkertoppen Gymnasium
 
-Denne Windows(R) (64-bit) version readme fil beskriver de følgende emner.
+VsCode - Python
 
-   - Beskrivelse af spillet
-   - Beskrivelse af funktioner
-   - Dokumentationen af programmet (opdelt)
-Starten
-Enemy og collision
 
-==========================================
+# Pacman
+
+**Beskrivelse af spillet**
 
 Spillet er en simpliceret version af pacman, hvor spilleren går efter spøgelset i stedet for pengene. Spillet har flere funktioner som: 
 
@@ -25,12 +21,13 @@ Spillet er en simpliceret version af pacman, hvor spilleren går efter spøgelse
 
 ==========================================
 
-Starten:
+**Starten**
+
 Vi begyndnte med at diskutere hvad vi skulle begynde med at kode. Vi startede med et simpelt display screen som er 800x600, og importede pygame. Vi så den Space Invaders koden og fik inspiration fra den til at kode vores program. Vi lavede "sprites" eller billeder til spilleren og fandt et billede af en af spøgelserne fra spillet. Derefter begyndte vi med "while" loopen. Derefter begyndte vi på player mechanics, og gav spilleren en x og y værdi, og indsatte pacman billedet, så spilleren kan bevæge den rundt, og det gjorde vi ved hjælp af "pygame.image.load("")"
 
 ==========================================
+### Dokumentation af koden
 
-Enemy og collision: 
-Nu hvor vi havde vores spiller havde vi ogs
+
 
 
