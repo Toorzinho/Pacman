@@ -148,6 +148,30 @@ Vi gav spøgelset de samme funktioner da vi tænkte at spøgelsen kan gå rundt 
 
 Her bliver alle billeder så som ghosten, scoren, timeren, bagrunden og pacman tegnet
 
+```
+def gameOverText():
+    overText = overFont.render("GAME OVER", True, (255, 255, 255)) # Creates the game over text
+    screen.blit(overText, (200, 250)) # Locates it on the x and y axis
+    
+def tryAgainText():
+    retryText = retryFont.render("Press Enter To Try Again", True, (255, 255, 255)) # Creates the game over text
+    screen.blit(retryText, (205, 310)) # Locates it on the x and y axis
+
+def showScore(x, y):
+    score = font.render("Score: " + str(score_value), True, (255, 255, 255))  # Adds 1 for each collision
+    screen.blit(score, (x, y))
+
+def showTimer(x, y):
+    elapsed_time = (pygame.time.get_ticks() - start_time) // 1000  # Calculate elapsed time in seconds
+    remaining_time = max(0, time_value - elapsed_time)  # Calculate remaining time
+    timer = font.render("Timer: " + str(remaining_time), True, (255, 255, 255))
+    screen.blit(timer, (x, y))
+```
+
+
+
+
+
 #### Flowdiagram
 
 ![image](https://github.com/Toorzinho/Pacman/assets/146086727/e384f0a1-76d1-4db6-a3bb-c4b28ffc53d6)
