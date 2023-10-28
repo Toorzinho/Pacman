@@ -135,6 +135,7 @@ Variablerne ``screen_hight`` og ``screen_width``bliver brugt i starten til at ko
     elif ghost_y < 0:
         ghost_y = screen_height
 ```
+Vi gav spøgelset de samme funktioner da vi tænkte at spøgelsen kan gå rundt på skærmen men vi endte ikke med at gøre det. Derfor virker denne kode som en grænse for at sørge for at spøgelsen ikke går ud af skærmen.
 
 ```
     # Render graphics
