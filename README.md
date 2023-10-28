@@ -97,6 +97,9 @@ while True:
 
 ![image](https://github.com/Toorzinho/Pacman/assets/146086727/e384f0a1-76d1-4db6-a3bb-c4b28ffc53d6)
 
+==========================================
+
+### Beskrivelse af udviklingsprocessen
 
 
 
